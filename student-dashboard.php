@@ -86,7 +86,69 @@ $role = $_SESSION['user_role'];
 
         // main content
 
+        <div class="main">
+            <div class="topbar">
+                <div>
+                    <h1>Welcome back, <?php echo $name; ?>!</h1>
+                    <p>Continue your learning journey!</p>
+                </div>
+                <div class="top-icons">
+                    <i class="fa-regular fa-moon"></i>
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </div>
 
+            <div class="stats">
+                <div class="stat-card">
+                    <div>
+                        <p>Courses Enrolled</p>
+                        <h2>12</h2>
+                    </div>
+                    <i class="fa-solid fa-book-open stat-icon blue"></i>
+                </div>
+
+                <div class="stat-card">
+
+                    <div>
+                        <p>Hours Learned</p>
+                        <h2>148</h2>
+                    </div>
+
+                    <i class="fa-regular fa-clock stat-icon purple"></i>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div>
+                        <p>Certificates</p>
+                        <h2>7</h2>
+                    </div>
+
+                    <i class="fa-solid fa-award stat-icon green"></i>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div>
+                        <p>Current Streak</p>
+                        <h2>23</h2>
+                    </div>
+
+                    <i class="fa-solid fa-fire stat-icon orange"></i>
+
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="content-grid">
+                
+            </div>
+        </div>
 
     </div>
 </body>
