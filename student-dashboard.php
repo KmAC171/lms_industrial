@@ -84,7 +84,7 @@ $role = $_SESSION['user_role'];
             </div>
         </div>
 
-        // main content
+        
 
         <div class="main">
             <div class="topbar">
