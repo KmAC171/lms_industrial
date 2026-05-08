@@ -146,10 +146,134 @@ $role = $_SESSION['user_role'];
             <!-- CONTENT -->
 
             <div class="content-grid">
-                
-            </div>
-        </div>
+                <div>
+                    <div class="section-title">
+                        <h2>Continue Learning!</h2>
+                        <span>View All</span>
+                    </div>
 
+                    <div class="course-card">
+                        <div class="course-image blue-bg">
+                            <span class="tag">Develeopment</span>
+                            <div class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Advanced React Patterns</h3>
+                            <p>
+                                <i class="fa-regular fa-clock"></i>
+                                2h 15m remaining
+                            </p>
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>67%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:67%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-image purple-bg">
+
+                            <span class="tag">Design</span>
+
+                            <div class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <h3>UI/UX Design Masterclass</h3>
+
+                            <p>
+                                <i class="fa-regular fa-clock"></i>
+                                1h 45m remaining
+                            </p>
+
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>34%</span>
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div class="progress" style="width:34%"></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="side-widgets">
+                    <div class="widget">
+                        <h3>
+                            <i class="fa-regular fa-calendar"></i>
+                            Upcoming Classes
+                        </h3>
+
+                        <div class="class-item">
+
+                            <h4>Live Q&A: React Hooks</h4>
+                            <p>Today, 3:00 PM</p>
+
+                        </div>
+
+                        <div class="class-item">
+
+                            <h4>Workshop: Advanced CSS</h4>
+                            <p>Tomorrow, 2:00 PM</p>
+
+                        </div>
+
+                        <div class="class-item">
+
+                            <h4>Code Review Session</h4>
+                            <p>May 9, 10:00 AM</p>
+
+                        </div>
+
+                    </div>
+                    <div class="widget">
+                        <h3>
+                            <i class="fa-solid fa-bullseye"></i>
+                            Weekly Goals
+                        </h3>
+
+                        <div class="goal">
+
+                            <div class="goal-text">
+                                <span>Complete 3 courses</span>
+                                <span>2/3</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress" style="width:70%"></div>
+                            </div>
+
+                        </div>
+                        <div class="goal">
+
+                            <div class="goal-text">
+                                <span>Study 10 hours</span>
+                                <span>7.5/10</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress" style="width:75%"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </body>
 
