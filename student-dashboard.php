@@ -41,28 +41,52 @@ $role = $_SESSION['user_role'];
             </div>
 
             <ul class="menu">
-                <li class="active">
-                    <i class="fa-solid fa-table-cells-large"></i>
-                    Dashboard
-                </li>
-                <li>
-                    <i class="fa-solid fa-book"></i>
-                    Courses
-                </li>
-                <li>
-                    <i class="fa-regular fa-calendar"></i>
-                    Calendar
+
+                <li class="<?= ($page == 'dashboard') ? 'active' : '' ?>">
+                    <a href="student-dashboard.php">
+
+                        <i class="fa-solid fa-table-cells-large"></i>
+                        Dashboard
+
+                    </a>
                 </li>
 
-                <li>
-                    <i class="fa-regular fa-message"></i>
-                    Messages
+                <li class="<?= ($page == 'courses') ? 'active' : '' ?>">
+                    <a href="courses.php">
+
+                        <i class="fa-solid fa-book"></i>
+                        Courses
+
+                    </a>
                 </li>
 
-                <li>
-                    <i class="fa-solid fa-trophy"></i>
-                    Achievements
+                <li class="<?= ($page == 'calendar') ? 'active' : '' ?>">
+                    <a href="calendar.php">
+
+                        <i class="fa-regular fa-calendar"></i>
+                        Calendar
+
+                    </a>
                 </li>
+
+                <li class="<?= ($page == 'messages') ? 'active' : '' ?>">
+                    <a href="messages.php">
+
+                        <i class="fa-regular fa-message"></i>
+                        Messages
+
+                    </a>
+                </li>
+
+                <li class="<?= ($page == 'achievements') ? 'active' : '' ?>">
+                    <a href="achievements.php">
+
+                        <i class="fa-solid fa-trophy"></i>
+                        Achievements
+
+                    </a>
+                </li>
+
             </ul>
 
             <div class="profile">
@@ -235,6 +259,124 @@ $role = $_SESSION['user_role'];
                             </div>
                         </div>
                     </div>
+
+                    <div class="recommendations">
+
+                        <div class="recommend-header">
+
+                            <div class="recommend-title">
+
+                                <div class="ai-icon">
+                                    <i class="fa-solid fa-brain"></i>
+                                </div>
+
+                                <div>
+
+                                    <h2>AI Recommendations</h2>
+
+                                    <p>Courses curated just for you</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="recommend-grid">
+
+                            <!-- CARD -->
+
+                            <div class="recommend-card">
+
+                                <div class="match-row">
+
+                                    <span class="match-badge">95% Match</span>
+
+                                    <i class="fa-solid fa-bolt bolt"></i>
+
+                                </div>
+
+                                <h3>TypeScript Deep Dive</h3>
+
+                                <p>Sarah Chen</p>
+
+                                <div class="card-footer">
+
+                                    <span>
+                                        ⭐ 4.9
+                                    </span>
+
+                                    <span>
+                                        12.5k students
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+
+                            <div class="recommend-card">
+
+                                <div class="match-row">
+
+                                    <span class="match-badge">92% Match</span>
+
+                                    <i class="fa-solid fa-bolt bolt"></i>
+
+                                </div>
+
+                                <h3>System Design Interview Prep</h3>
+
+                                <p>Alex Morgan</p>
+
+                                <div class="card-footer">
+
+                                    <span>
+                                        ⭐ 4.8
+                                    </span>
+
+                                    <span>
+                                        8.2k students
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+
+                            <div class="recommend-card">
+
+                                <div class="match-row">
+
+                                    <span class="match-badge">88% Match</span>
+
+                                    <i class="fa-solid fa-bolt bolt"></i>
+
+                                </div>
+
+                                <h3>Next.js Full-Stack Development</h3>
+
+                                <p>Michael Zhang</p>
+
+                                <div class="card-footer">
+
+                                    <span>
+                                        ⭐ 4.9
+                                    </span>
+
+                                    <span>
+                                        15.3k students
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
 
                 <div class="side-widgets">
@@ -308,6 +450,86 @@ $role = $_SESSION['user_role'];
                             </div>
 
                         </div>
+                    </div>
+                    <div class="leaderboard">
+
+                        <div class="leaderboard-header">
+
+                            <h3>
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                Leaderboard
+                            </h3>
+
+                            <p>Top learners this week</p>
+
+                        </div>
+
+                        <!-- ITEM -->
+
+                        <div class="leader-item">
+
+                            <div class="leader-left">
+
+                                <div class="rank gold">1</div>
+
+                                <span>Sarah Johnson</span>
+
+                            </div>
+
+                            <div class="score">
+
+                                ⚡ 2450
+
+                            </div>
+
+                        </div>
+
+                        <!-- ITEM -->
+
+                        <div class="leader-item active-user">
+
+                            <div class="leader-left">
+
+                                <div class="rank silver">2</div>
+
+                                <span>You</span>
+
+                            </div>
+
+                            <div class="score">
+
+                                ⚡ 2180
+
+                            </div>
+
+                        </div>
+
+                        <!-- ITEM -->
+
+                        <div class="leader-item">
+
+                            <div class="leader-left">
+
+                                <div class="rank bronze">3</div>
+
+                                <span>Mike Chen</span>
+
+                            </div>
+
+                            <div class="score">
+
+                                ⚡ 1920
+
+                            </div>
+
+                        </div>
+
+                        <button class="leader-btn">
+
+                            View Full Leaderboard
+
+                        </button>
+
                     </div>
                 </div>
             </div>
