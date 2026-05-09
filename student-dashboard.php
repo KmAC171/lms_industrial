@@ -52,7 +52,7 @@ $role = $_SESSION['user_role'];
                 </li>
 
                 <li class="<?= ($page == 'courses') ? 'active' : '' ?>">
-                    <a href="courses.php">
+                    <a href="student-courses.php">
 
                         <i class="fa-solid fa-book"></i>
                         Courses
@@ -61,7 +61,7 @@ $role = $_SESSION['user_role'];
                 </li>
 
                 <li class="<?= ($page == 'calendar') ? 'active' : '' ?>">
-                    <a href="calendar.php">
+                    <a href="student-calendar.php">
 
                         <i class="fa-regular fa-calendar"></i>
                         Calendar
@@ -70,7 +70,7 @@ $role = $_SESSION['user_role'];
                 </li>
 
                 <li class="<?= ($page == 'messages') ? 'active' : '' ?>">
-                    <a href="messages.php">
+                    <a href="student-messages.php">
 
                         <i class="fa-regular fa-message"></i>
                         Messages
@@ -79,7 +79,7 @@ $role = $_SESSION['user_role'];
                 </li>
 
                 <li class="<?= ($page == 'achievements') ? 'active' : '' ?>">
-                    <a href="achievements.php">
+                    <a href="student-achievements.php">
 
                         <i class="fa-solid fa-trophy"></i>
                         Achievements
