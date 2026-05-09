@@ -22,6 +22,12 @@ body{
     flex-direction: column;
     justify-content: space-between;
     padding: 25px;
+     position:sticky;
+    top:0;
+
+    height:100vh;
+
+    overflow-y:auto;
 }
 
 .logo{
@@ -119,7 +125,7 @@ body{
     color:#111827;
 }
 
-.main{
+.main {
     flex:1;
     padding:35px;
 }
@@ -232,6 +238,9 @@ body{
 }
 .purple-bg{
     background:linear-gradient(135deg,#c084fc,#9333ea);
+}
+.green-bg{
+    background:linear-gradient(135deg,#34d399,#10b981);
 }
 
 .tag{

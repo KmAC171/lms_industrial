@@ -75,6 +75,11 @@ $role = $_SESSION['user_role'];
                         <h4><?php echo $name; ?></h4>
                         <span><?php echo $role; ?></span>
                     </div>
+                    <a href="profile-settings.php" class="settings-btn">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                    </a>
                 </div>
 
                 <a href="logout.php" class="logout-btn">
@@ -84,7 +89,7 @@ $role = $_SESSION['user_role'];
             </div>
         </div>
 
-        
+
 
         <div class="main">
             <div class="topbar">
@@ -208,6 +213,28 @@ $role = $_SESSION['user_role'];
 
                         </div>
                     </div>
+                    <div class="course-card">
+                        <div class="course-image green-bg">
+                            <span class="tag">AI/ML</span>
+                            <div class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Machine Learning Fundamentals</h3>
+                            <p>
+                                <i class="fa-regular fa-clock"></i>
+                                45m remaining
+                            </p>
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>89%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:89%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="side-widgets">
@@ -266,6 +293,18 @@ $role = $_SESSION['user_role'];
 
                             <div class="progress-bar">
                                 <div class="progress" style="width:75%"></div>
+                            </div>
+
+                        </div>
+                        <div class="goal">
+
+                            <div class="goal-text">
+                                <span>Earn 2 Certificates</span>
+                                <span>1/2</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress" style="width:50%"></div>
                             </div>
 
                         </div>
