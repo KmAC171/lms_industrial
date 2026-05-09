@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-$page = "courses";
+$page = "calendar";
 
 $name = $_SESSION['user_name'];
 $role = $_SESSION['user_role'];
@@ -18,8 +18,8 @@ $role = $_SESSION['user_role'];
 
 <head>
     <meta charset="UTF-8">
-    <title>Courses</title>
-    <link rel="stylesheet" href="student-courses.css">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="student-calender.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -52,7 +52,7 @@ $role = $_SESSION['user_role'];
                     </li>
 
                     <li class="<?= ($page == 'courses') ? 'active' : '' ?>">
-                        <a href="courses.php">
+                        <a href="student-courses.php">
 
                             <i class="fa-solid fa-book"></i>
                             Courses
@@ -120,11 +120,16 @@ $role = $_SESSION['user_role'];
             <div class="topbar">
                 <div>
 
-                <h1>My Courses</h1>
+                <h1>My Calendar</h1>
 
-                <p>Manage and continue your enrolled courses</p>
+                <p>View and manage your schedule</p>
 
             </div>
+            <div class="top-icons">
+                    <i class="fa-regular fa-moon"></i>
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-user"></i>
+                </div>
             </div>
         </div>
     </div>

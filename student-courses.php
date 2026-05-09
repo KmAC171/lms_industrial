@@ -61,31 +61,31 @@ $role = $_SESSION['user_role'];
                     </li>
 
                     <li class="<?= ($page == 'calendar') ? 'active' : '' ?>">
-                    <a href="student-calendar.php">
+                        <a href="student-calendar.php">
 
-                        <i class="fa-regular fa-calendar"></i>
-                        Calendar
+                            <i class="fa-regular fa-calendar"></i>
+                            Calendar
 
-                    </a>
-                </li>
+                        </a>
+                    </li>
 
-                <li class="<?= ($page == 'messages') ? 'active' : '' ?>">
-                    <a href="student-messages.php">
+                    <li class="<?= ($page == 'messages') ? 'active' : '' ?>">
+                        <a href="student-messages.php">
 
-                        <i class="fa-regular fa-message"></i>
-                        Messages
+                            <i class="fa-regular fa-message"></i>
+                            Messages
 
-                    </a>
-                </li>
+                        </a>
+                    </li>
 
-                <li class="<?= ($page == 'achievements') ? 'active' : '' ?>">
-                    <a href="student-achievements.php">
+                    <li class="<?= ($page == 'achievements') ? 'active' : '' ?>">
+                        <a href="student-achievements.php">
 
-                        <i class="fa-solid fa-trophy"></i>
-                        Achievements
+                            <i class="fa-solid fa-trophy"></i>
+                            Achievements
 
-                    </a>
-                </li>
+                        </a>
+                    </li>
 
                 </ul>
 
@@ -119,13 +119,72 @@ $role = $_SESSION['user_role'];
         <div class="main">
             <div class="topbar">
                 <div>
-
-                <h1>My Courses</h1>
-
-                <p>Manage and continue your enrolled courses</p>
-
+                    <h1>My Courses</h1>
+                    <p>Manage and continue your enrolled courses</p>
+                </div>
+                <div class="top-icons">
+                    <i class="fa-regular fa-moon"></i>
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-user"></i>
+                </div>
             </div>
+
+
+            <!-- SEARCH -->
+
+            <form method="GET" class="search-bar">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="search" placeholder="Search courses, instructors, or topics..."
+                        value="<?= $search ?>">
+
+                </div>
+
+                <!-- FILTER -->
+
+                <select name="category" class="filter-select">
+                    <option value="">All Categories</option>
+                    <option value="Development">Development</option>
+                    <option value="Design">Design</option>
+                    <option value="Business">Business</option>
+                    <option value="AI & ML">AI & ML</option>
+                </select>
+
+                <!-- SORT -->
+
+                <select name="sort" class="filter-select">
+                    <option value="">Newest</option>
+                    <option value="rating">Highest Rated</option>
+                    <option value="students">Most Students</option>
+                </select>
+
+                <button type="submit" class="search-btn">Apply</button>
+            </form>
+
+            <!-- CATEGORY TABS -->
+
+            <div class="category-tabs">
+                <a href="student-courses.php" class="tab active">All Courses</a>
+                <a href="courses.php?category=Development" class="tab">
+                    Development
+                </a>
+
+                <a href="student-courses.php?category=Design" class="tab">
+                    Design
+                </a>
+
+                <a href="student-courses.php?category=Business" class="tab">
+                    Business
+                </a>
+
+                <a href="student-courses.php?category=AI & ML" class="tab">
+                    AI & ML
+                </a>
             </div>
+            <p class="course-count">
+                Showing <?= mysqli_num_rows($result) ?> courses
+            </p>
+
         </div>
     </div>
 </body>
