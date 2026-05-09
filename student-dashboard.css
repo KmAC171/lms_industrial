@@ -24,10 +24,14 @@ body{
     padding: 25px;
      position:sticky;
     top:0;
-
     height:100vh;
-
     overflow-y:auto;
+}
+
+.menu li a{
+    border-radius:14px;
+    text-decoration:none; /* REMOVE UNDERLINE */
+    transition:0.3s;
 }
 
 .logo{

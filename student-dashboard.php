@@ -5,7 +5,7 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: index.php");
     exit();
 }
-
+$page = "dashboard";
 $name = $_SESSION['user_name'];
 $role = $_SESSION['user_role'];
 
