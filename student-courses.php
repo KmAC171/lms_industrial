@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'db.php';
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: index.php");
@@ -10,6 +11,47 @@ $page = "courses";
 
 $name = $_SESSION['user_name'];
 $role = $_SESSION['user_role'];
+
+$search = "";
+if(isset($_GET['search'])){
+    $search = $_GET['search'];
+}
+
+$category = "";
+if(isset($_GET['category'])){
+    $category = $_GET['category'];
+}
+
+$sort = "";
+if(isset($_GET['sort'])){
+    $sort = $_GET['sort'];
+}
+
+$query = "SELECT * FROM courses WHERE 1";
+
+if($search != ""){
+    $query .= " AND (
+    title LIKE '%$search%' OR
+    instructor LIKE '%$search%' OR
+    category LIKE '%$search%'
+    )";
+}
+
+if($category != "" && $category != "All Courses"){
+    $query .= " AND category='$category'";
+}
+
+if($sort == "rating"){
+    $query .= " ORDER BY rating DESC";
+}
+else if($sort == "students"){
+    $query .= " ORDER BY students DESC";
+}
+else {
+    $query .= " ORDER BY created_at DESC";
+}
+
+$result = mysqli_query($conn, $query);
 
 ?>
 
