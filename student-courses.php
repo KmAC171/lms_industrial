@@ -61,7 +61,7 @@ $result = mysqli_query($conn, $query);
 <head>
     <meta charset="UTF-8">
     <title>Courses</title>
-    <link rel="stylesheet" href="student-courses.css">
+    <link rel="stylesheet" href="student-courses.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -221,6 +221,12 @@ $result = mysqli_query($conn, $query);
 
                 <a href="student-courses.php?category=AI & ML" class="tab">
                     AI & ML
+                </a>
+                <a href="student-courses.php?category=Marketing" class="tab">
+                    Marketing
+                </a>
+                <a href="student-courses.php?category=Data Science" class="tab">
+                    Data Science
                 </a>
             </div>
             <p class="course-count">

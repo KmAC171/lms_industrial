@@ -142,7 +142,7 @@ body{
     color:#111827;
 }
 
-.main {
+.main{
     flex:1;
     padding:35px;
 }
@@ -168,12 +168,12 @@ body{
     font-size:22px;
 }
 
-.search-bar {
+.search-bar{
     display: flex;
     gap: 15px;
     margin-bottom: 30px;
 }
-.search-box {
+.search-box{
     flex: 1;
     background: #fff;
     border: 1px solid #e5e7eb;
@@ -204,4 +204,26 @@ body{
     background:#7c4dff;
     color:#fff;
     cursor:pointer;
+}
+.category-tabs {
+    display: flex;
+    gap:15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+.tab {
+    padding:12px 22px;
+    border-radius:14px;
+    border: 1px solid #e5e7eb;
+    text-decoration: none;
+    color: #111827;
+    background: #fff;
+}
+.tab.active{
+    background:#6366f1;
+    color:#fff;
+}
+.course-count{
+    margin-bottom:25px;
+    color:#64748b;
 }
