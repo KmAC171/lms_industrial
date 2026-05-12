@@ -233,6 +233,37 @@ $result = mysqli_query($conn, $query);
                 Showing <?= mysqli_num_rows($result) ?> courses
             </p>
 
+            <!--Courses-->
+            <div class="courses-grid">
+                <?php while($course = mysqli_fetch_assoc($result)) { ?>
+                <div class="course-box">
+                    <div class="course-thumb">
+                        <span class="course-tag">
+                            <?= $course['featured_tag'] ?>
+                        </span>
+                    </div>
+                    <div class="course-info">
+                        <h3><?= $course['title'] ?></h3>
+                        <p><?= $course['description'] ?></p>
+                        <h4><?= $course['instructor'] ?></h4>
+                        <div class="course-meta">
+                             <span>
+                                ⭐ <?= $course['rating'] ?>
+                            </span>
+
+                            <span>
+                                👥 <?= number_format($course['students']/1000,1) ?>k
+                            </span>
+
+                            <span>
+                                🕒 <?= $course['duration'] ?>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+
         </div>
     </div>
 </body>
