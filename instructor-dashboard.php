@@ -38,3 +38,20 @@ WHERE instructor_id='$instructor_id'
 $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Instructor Dashboard</title>
+
+    <link rel="stylesheet" href="instructor-dashboard.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+</html>
