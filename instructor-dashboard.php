@@ -185,7 +185,43 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
                 </div>
             </div>
 
-            
+            <div class="instructor_layout">
+                <!--left-->
+                <div>
+                    <div class="section-header">
+                        <h2>Your Courses</h2>
+                        <button class="view-btn">View All</button>
+                    </div>
+
+                    <?php while($course = mysqli_fetch_assoc($corses)) { ?>
+                        <div class="course-manage-card">
+                            <div class="course-manage-top">
+                                <div>
+                                    <div class="course-title-row">
+                                        <h3>
+                                            <?= $course['title'] ?>
+                                        </h3>
+                                        <span class="status-badge">
+                                            <?= $course['status'] ?>
+                                        </span>
+                                    </div>
+                                    <div class="course-manage-data">
+                                        <span>
+                                            👥 <?= $course['students'] ?> students
+                                        </span>
+                                         <span>
+                                    ⭐ <?= $course['rating'] ?>
+                                </span>
+
+                                <span>
+                                    💲 <?= number_format($course['revenue']) ?>
+                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
