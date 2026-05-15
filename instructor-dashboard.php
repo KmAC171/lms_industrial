@@ -5,12 +5,12 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: index.php");
     exit();
 }
-
+$page = 'instructor-dashboard';
 $name = $_SESSION['user_name'];
 $role = $_SESSION['user_role'];
 include 'db.php';
 
-$page = 'instructor_dashboard';
+
 
 $instructor_id = $_SESSION['user_id'];
 
@@ -146,6 +146,45 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
             </div>
         </div>
         <div class="main">
+            <div class="topbar">
+                <div>
+                    <h1>Welcome back, <?php echo $name; ?>!</h1>
+                    <p>Continue your teaching journey!</p>
+                </div>
+                <div class="top-icons">
+                    <i class="fa-regular fa-moon"></i>
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </div>
+            <hr>
+            <div class="instructor-stats">
+                <div class="stat-box">
+                    <p>Total Students</p>
+                    <h2>
+                        <?= number_format($stats['total_students']) ?>
+                    </h2>
+                </div>
+                <div class="stat-box">
+                    <p>Active Courses</p>
+                    <h2>
+                        <?= number_format($stats['total_courses']) ?>
+                    </h2>
+                </div>
+                <div class="stat-box">
+                    <p>Revenue</p>
+                    <h2>
+                        $<?= number_format($stats['total_revenue']) ?>
+                    </h2>
+                </div>
+                <div class="stat-box">
+                    <p>Avg Rating</p>
+                    <h2>
+                        <?= number_format($stats['avg_rating'], 1)  ?>
+                    </h2>
+                </div>
+            </div>
+
             
         </div>
     </div>
