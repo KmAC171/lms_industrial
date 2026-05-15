@@ -212,12 +212,39 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
                                          <span>
                                     ⭐ <?= $course['rating'] ?>
                                 </span>
-
                                 <span>
                                     💲 <?= number_format($course['revenue']) ?>
                                 </span>
                                     </div>
                                 </div>
+
+                                <!--actions-->
+                                <div class="course-actions">
+                                    <a href="#">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </a>
+                                    <a href="#">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="fa-solid fa-chart-column"></i>
+                            </a>
+                                </div>
+                            </div>
+
+                            <!--progress-->
+                            <div class="progress-label">
+                                Avg. Completion
+                                <span>
+                                    <?= $course['completion_percent'] ?>%
+                                </span>
+                            </div>
+                            <div class="progress-bar">
+                                <div 
+                                clsass="progress-fill"
+                                style="width:<?= $course['completion_percent'] ?>%"
+                                ></div>
                             </div>
                         </div>
                 </div>
