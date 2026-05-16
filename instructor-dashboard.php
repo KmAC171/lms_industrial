@@ -180,7 +180,7 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
                 <div class="stat-box">
                     <p>Avg Rating</p>
                     <h2>
-                        <?= number_format($stats['avg_rating'], 1)  ?>
+                        <?= number_format($stats['avg_rating'], 1) ?>
                     </h2>
                 </div>
             </div>
@@ -193,7 +193,7 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
                         <button class="view-btn">View All</button>
                     </div>
 
-                    <?php while($course = mysqli_fetch_assoc($courses)) { ?>
+                    <?php while ($course = mysqli_fetch_assoc($courses)) { ?>
                         <div class="course-manage-card">
                             <div class="course-manage-top">
                                 <div>
@@ -209,12 +209,12 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
                                         <span>
                                             👥 <?= $course['students'] ?> students
                                         </span>
-                                         <span>
-                                    ⭐ <?= $course['rating'] ?>
-                                </span>
-                                <span>
-                                    💲 <?= number_format($course['revenue']) ?>
-                                </span>
+                                        <span>
+                                            ⭐ <?= $course['rating'] ?>
+                                        </span>
+                                        <span>
+                                            💲 <?= number_format($course['revenue']) ?>
+                                        </span>
                                     </div>
                                 </div>
 
@@ -224,12 +224,12 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
                                         <i class="fa-regular fa-eye"></i>
                                     </a>
                                     <a href="#">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                            </a>
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
 
-                            <a href="#">
-                                <i class="fa-solid fa-chart-column"></i>
-                            </a>
+                                    <a href="#">
+                                        <i class="fa-solid fa-chart-column"></i>
+                                    </a>
                                 </div>
                             </div>
 
@@ -241,22 +241,52 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
                                 </span>
                             </div>
                             <div class="progress-bar">
-                                <div 
-                                clsass="progress-fill"
-                                style="width:<?= $course['completion_percent'] ?>%"
-                                ></div>
+                                <div class="progress-fill" style="width:<?= $course['completion_percent'] ?>%"></div>
                             </div>
                         </div>
-                        <?php } ?>
+                    <?php } ?>
+                    <div class="activity-box">
+                        <h2>Quick Actions</h2>
+                        <p>common tasks & tools</p>
+                        <div class="actions">
+                            <div class="action-box">
+                                <a href="#">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <span>Upload Video</span>
+                                </a>
+
+                            </div>
+                            <div class="action-box">
+                                <a href="#">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <span>Create Quiz</span>
+                                </a>
+
+                            </div>
+                            <div class="action-box">
+                                <a href="#">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <span>View Messages</span>
+                                </a>
+
+                            </div>
+                            <div class="action-box">
+                                <a href="#">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <span>Issue Certificates</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--right-->
                 <div class="activity-box">
                     <h2>Recent Activities</h2>
                     <p>latest student intersctions</p>
-                    <?php while($activity = mysqli_fetch_assoc($activities)) { ?>
+                    <?php while ($activity = mysqli_fetch_assoc($activities)) { ?>
                         <div class="activity-item">
                             <div class="activity-icon">
-                                 <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
                             </div>
                             <div>
                                 <h4>
@@ -266,7 +296,7 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
                                     <?= $activity['course_name'] ?>
                                 </span>
                                 <p>
-                                    <?= $activity['activty_text'] ?>
+                                    <?= $activity['activity_text'] ?>
                                 </p>
                             </div>
                         </div>
