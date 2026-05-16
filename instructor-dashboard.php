@@ -44,6 +44,45 @@ WHERE instructor_id='$instructor_id'
 
 $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
 
+$currentmonth = date('m');
+$currentyear = date('Y');
+
+$new_students_query = "
+SELECT COUNT(*) AS total
+FROM enrollments
+WHERE instructor_id='$instructor_id'
+AND MONTH(enrolled_at)='$currentmonth'
+AND YEAR(enrolled_at)='$currentyear'
+";
+
+$new_students = mysqli_fetch_assoc(mysqli_query($conn, $new_students_query));
+
+$completion_query = "
+SELECT COUNT(*) AS total
+FROM course_completions
+WHERE instructor_id='$instructor_id'
+AND MONTH(completed_at)='$currentmonth'
+AND YEAR(completed_at)='$currentyear'
+";
+
+$completions = mysqli_fetch_assoc(mysqli_query($conn, $completion_query));
+
+$reviews_query = "
+SELECT COUNT(*) AS total
+FROM reviews
+WHERE instructor_id='$instructor_id'
+AND MONTH(completed_at)='$currentmonth'
+AND YEAR(completed_at)='$currentyear'
+";
+
+$reviews = mysqli_fetch_assoc(mysqli_query($conn, $reviews_query));
+
+$new_students_percent = min(($new_students['total'] / 200) * 100, 100);
+
+$completion_percent = min(($completions['total'] / 120) * 100, 100);
+
+$reviews_percent = min(($reviews['total'] / 100) * 100, 100);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
