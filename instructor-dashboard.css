@@ -152,7 +152,7 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:35px;
+    margin-bottom: 15px;
 }
 
 .topbar h1{
@@ -167,4 +167,7 @@ body{
     display:flex;
     gap:20px;
     font-size:22px;
+}
+hr {
+    margin-bottom: 30px;
 }

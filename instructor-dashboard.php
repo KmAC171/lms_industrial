@@ -193,7 +193,7 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
                         <button class="view-btn">View All</button>
                     </div>
 
-                    <?php while($course = mysqli_fetch_assoc($corses)) { ?>
+                    <?php while($course = mysqli_fetch_assoc($courses)) { ?>
                         <div class="course-manage-card">
                             <div class="course-manage-top">
                                 <div>
@@ -247,6 +247,31 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
                                 ></div>
                             </div>
                         </div>
+                        <?php } ?>
+                </div>
+                <!--right-->
+                <div class="activity-box">
+                    <h2>Recent Activities</h2>
+                    <p>latest student intersctions</p>
+                    <?php while($activity = mysqli_fetch_assoc($activities)) { ?>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                 <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div>
+                                <h4>
+                                    <?= $activity['student_name'] ?>
+                                </h4>
+                                <span>
+                                    <?= $activity['course_name'] ?>
+                                </span>
+                                <p>
+                                    <?= $activity['activty_text'] ?>
+                                </p>
+                            </div>
+                        </div>
+                    <?php } ?>
+
                 </div>
             </div>
         </div>
