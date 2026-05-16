@@ -280,29 +280,39 @@ $stats = mysqli_fetch_assoc(mysqli_query($conn, $stats_query));
                     </div>
                 </div>
                 <!--right-->
-                <div class="activity-box">
-                    <h2>Recent Activities</h2>
-                    <p>latest student intersctions</p>
-                    <?php while ($activity = mysqli_fetch_assoc($activities)) { ?>
-                        <div class="activity-item">
-                            <div class="activity-icon">
-                                <i class="fa-regular fa-star"></i>
+                <div class="rightside">
+                    <div class="activity-box">
+                        <h2>Recent Activities</h2>
+                        <p>latest student intersctions</p>
+                        <?php while ($activity = mysqli_fetch_assoc($activities)) { ?>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div>
+                                    <h4>
+                                        <?= $activity['student_name'] ?>
+                                    </h4>
+                                    <span>
+                                        <?= $activity['course_name'] ?>
+                                    </span>
+                                    <p>
+                                        <?= $activity['activity_text'] ?>
+                                    </p>
+                                </div>
                             </div>
-                            <div>
-                                <h4>
-                                    <?= $activity['student_name'] ?>
-                                </h4>
-                                <span>
-                                    <?= $activity['course_name'] ?>
-                                </span>
-                                <p>
-                                    <?= $activity['activity_text'] ?>
-                                </p>
-                            </div>
-                        </div>
-                    <?php } ?>
+                        <?php } ?>
 
+                    </div>
+                    <div class="activity-box">
+                        <h2>This Month</h2>
+                        <p>performance overview</p>
+                        
+
+                    </div>
                 </div>
+                
+
             </div>
         </div>
     </div>

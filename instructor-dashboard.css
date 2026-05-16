@@ -276,6 +276,7 @@ hr {
     border:1px solid #e5e7eb;
     border-radius:24px;
     padding:24px;
+    margin-bottom: 35px;
 }
 
 .activity-box h2{
@@ -327,6 +328,7 @@ hr {
     align-items: center;
     gap: 42px;
 }
+
 
 @media(max-width:1200px){
 
